@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Project Description
+
+This project is a way for me to learn now to create webcontent that updates after changes of stateful data.
+There is no real purpose in what this app is supposed to be able to do. It's just for me to check out things like contexts, reducer and other nifty features of React.
+
+The only purpose why this reposititory is public is to share it with my development mentor(s) and get feedback and suggestions how to do it properly. What else is learning good for? ;)
+
 ## Available Scripts
 
 In the project directory, you can run:
