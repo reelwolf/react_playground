@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Inputcard from '../containers/Inputcard';
-import Outputcard from '../containers/Outputcard';
+import Inputcard from './Inputcard';
+import Outputcard from './Outputcard';
 import StringCarddata from '../types/StringCarddata';
 
 const Basiclayout = () => {
