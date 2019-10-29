@@ -2,34 +2,19 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import 'typeface-roboto';
 import Basiclayout from './containers/Basiclayout';
-import { Fab, makeStyles, Theme, createStyles } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
 import Notification from './containers/Notification';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      position: 'fixed',
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-    }
-  }),
-);
+import Cardfactory from './components/Cardfactory';
+import StringCarddata from './types/StringCarddata';
+import { MultiStringcardContext } from './contexts/CardContexts';
 
 const App: React.FC = () => {
-  const classes = useStyles();
-
-  const handleAdd = () => {
-    // Open the Notification!
-  }
-
   return (
     <Container maxWidth="lg">
+      <MultiStringcardContext.Provider value={[new StringCarddata(), new StringCarddata("Universe!", "Welcome")]}>
         <Notification />
         <Basiclayout />
-      <Fab color="secondary" size="large" onClick={handleAdd} aria-label="add" className={classes.root} >
-        <AddIcon fontSize="large" />
-      </Fab>
+        <Cardfactory />
+      </MultiStringcardContext.Provider>
     </Container>
   );
 }
